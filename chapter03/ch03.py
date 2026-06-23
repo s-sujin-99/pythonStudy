@@ -68,12 +68,13 @@ from random import *
 for i in range(0,10) :
     print(int((random()*(179 - 120 +1))+120))
 '''
-#randrange
+#randrange -> 마지막숫자 미포함
 '''
 for i in range(0,5) :
     print(randrange(1,101))
+    print(int(random()*(125-120)+120))
 
 '''
-#randint
-for i in range(0,10) :
+#randint -> 마지막숫자 포함
+for i in range(0,5) :
     print(randint(1,100))
