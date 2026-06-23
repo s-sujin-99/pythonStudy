@@ -8,13 +8,38 @@ Quiz) 사이트별로 비밀번호를 만들어 주는 프로그램을 작성하
 예) 생성된 비밀번호 : nav51
 '''
 
+'''
+# 웹사이트 이름 찾을 덱스 추출
 webSite = 'http://naver.com'
 findStartIndex = webSite.find('/')
 startIndex = webSite.find('/', findStartIndex+1) +1
 endIndex = webSite.find(".")
+
+# 웹사이트 이름 추출
 webName = webSite[startIndex :endIndex ]
+
+# 규칙3
 sliceWeb = webName[:3]
 webNum = len(webName)
-countE = webSite.count('e')
+countE = webName.count('e')
+
+# 비밀번호 만들기
+newPw = sliceWeb + str(webNum) + str(countE) + '!'
+print(f'생성된 비밀번호 : {newPw}')
+'''
+
+# 웹사이트 이름 추출
+webSite = 'http://google.com'
+webSiteName = webSite.replace("http://","")
+findName = webSiteName.find('.')
+
+webName = webSiteName[:findName]
+
+# 규칙3
+sliceWeb = webName[:3]
+webNum = len(webName)
+countE = webSiteName.count('e')
+
+# 비밀번호 만들기
 newPw = sliceWeb + str(webNum) + str(countE) + '!'
 print(f'생성된 비밀번호 : {newPw}')
